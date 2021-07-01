@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
+import Gear from "../assets/imgs/rueda.svg";
 
 const useStyles = makeStyles(() => ({
   buttonRound: {
@@ -10,6 +11,13 @@ const useStyles = makeStyles(() => ({
     border: "2px solid transparent",
     borderRadius: 6,
     backgroundClip: "padding-box",
+    boxShadow: "0 20px 6px rgba(0 0 0 / 0.2)",
+
+    "& span": {
+      justifyContent: "center",
+      display: "flex",
+      padding: "0 0.5rem 0 0",
+    },
     "&:after": {
       position: "absolute",
       top: -2,
@@ -21,6 +29,9 @@ const useStyles = makeStyles(() => ({
       zIndex: -1,
       borderRadius: 6,
     },
+    "&:hover": {
+      backgroundColor: "#2f417c",
+    },
   },
 }));
 
@@ -30,8 +41,8 @@ export default function ContainedButtons() {
   return (
     <div>
       <Button className={classes.buttonRound} variant="contained">
-        <span aria-label="nut" role="img">
-          ⚙️
+        <span aria-label="gear">
+          <img src={Gear} alt="gear" />
         </span>{" "}
         Create Vault
       </Button>

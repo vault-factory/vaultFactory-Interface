@@ -4,9 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
 import Button from "../components/ButtonStyled";
 import TopBar from "../components/navs/TopBar";
-import Finance from "../assets/imgs/finance.svg";
 import Logo from "../assets/imgs/logo.svg";
-import VaultFactory from "../assets/imgs/vaultfactory.svg";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,6 +23,9 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     flexDirection: "column",
     color: "#fff",
+    "& img": {
+      filter: "drop-shadow(0px 0px 100px rgb(255 255 255 / 0.2))",
+    },
   },
   space: {
     margin: "3rem 0 2rem 0",
@@ -39,14 +40,9 @@ export const Header = () => {
       <TopBar />
       <div className={classes.content}>
         <Box sx>
-          <img height="150px" src={Logo} alt="logo" />
+          <img height="250px" src={Logo} alt="logo" />
         </Box>
-        <Box>
-          <img height="60px" src={VaultFactory} alt="VaultFactory" />
-        </Box>
-        <Box>
-          <img height="20px" width="80px" src={Finance} alt="Finance" />
-        </Box>
+
         <Box className={classes.space}>
           <Typography>Create your vault, earn money together</Typography>
         </Box>

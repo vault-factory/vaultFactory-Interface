@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import { styled } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/styles";
-import logo from "../../assets/imgs/logo.svg";
+import logo from "../../assets/imgs/logoMenu.svg";
 
 const useStyles = makeStyles({
   noShadow: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     background: "rgba(72, 117, 234, 0.17);",
     border: "1px solid #4774E9",
     padding: "0.3em 1.5em",
-    boxShadow: "0px 34px 42px #000000",
+    boxShadow: "0px 0px 20px #0e1d44",
   },
 });
 
