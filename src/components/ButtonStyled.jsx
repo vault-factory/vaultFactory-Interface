@@ -1,36 +1,30 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
 import Gear from "../assets/imgs/rueda.svg";
 
 const useStyles = makeStyles(() => ({
-  buttonRound: {
-    backgroundColor: "#1B2444",
-    color: "#fff",
+  border: {
     position: "relative",
-    border: "2px solid transparent",
-    borderRadius: 6,
-    backgroundClip: "padding-box",
+    background: "linear-gradient(to right,#0df9d2, #f73669)",
+    padding: "2px",
     boxShadow: "0 20px 6px rgba(0 0 0 / 0.2)",
+    borderRadius: 6,
     fontWeight: 700,
     "& span": {
       justifyContent: "center",
-      display: "flex",
       padding: "0 0.5rem 0 0",
     },
-    "&:after": {
-      position: "absolute",
-      top: -2,
-      left: -2,
-      right: -2,
-      bottom: -2,
-      background: "linear-gradient(to left,#0df9d2, #f73669)",
-      content: '""',
-      zIndex: -1,
-      borderRadius: 6,
-    },
+  },
+  in: {
+    background: "#181E3A",
+    color: "white",
+    padding: "0.2rem 1rem",
+    borderRadius: "3px",
+    fontWeight: 700,
     "&:hover": {
-      backgroundColor: "#2f417c",
+      backgroundColor: "#1A2343",
     },
   },
 }));
@@ -40,11 +34,13 @@ export default function ContainedButtons() {
 
   return (
     <div>
-      <Button className={classes.buttonRound} variant="contained">
-        <span aria-label="gear">
-          <img src={Gear} alt="gear" />
-        </span>{" "}
-        Create Vault
+      <Button className={classes.border} variant="contained">
+        <Box className={classes.in}>
+          <span aria-label="gear">
+            <img src={Gear} alt="gear" />
+          </span>{" "}
+          Create Vault
+        </Box>
       </Button>
     </div>
   );

@@ -24,14 +24,15 @@ const useStyles = makeStyles(() => ({
     flexDirection: "column",
     color: "#fff",
     "& img": {
-      filter: "drop-shadow(0px 0px 100px rgb(255 255 255 / 0.2))",
+      filter: "drop-shadow(0px 0px 100px rgb(255 255 255 / 0.1))",
     },
   },
   space: {
     margin: "3rem 0 2rem 0",
   },
   bold: {
-    fontWeight: "bold",
+    fontWeight: "400",
+    color: "#DCD9FF",
   },
 }));
 
@@ -48,7 +49,7 @@ export const Header = () => {
 
         <Box className={classes.space}>
           <Typography className={classes.bold} variant="h5">
-            Create your vault, earn money together
+            Create your vault, earn money together.
           </Typography>
         </Box>
         <Box>

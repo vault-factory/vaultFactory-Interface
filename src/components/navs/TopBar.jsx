@@ -34,7 +34,8 @@ const useStyles = makeStyles({
     border: "1px solid #4774E9",
     padding: "0.3em 1.5em",
     boxShadow: "0px 0px 20px #0e1d44",
-    fontWeight: "500",
+    fontWeight: "600",
+    textTransform: "none",
   },
 });
 
