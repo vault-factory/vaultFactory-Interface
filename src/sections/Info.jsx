@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    color: "dcd9ff",
   },
   item1: {
     display: "flex",
@@ -24,11 +25,20 @@ const useStyles = makeStyles(() => ({
     },
   },
   item2: {
-    color: "white",
     display: "flex",
     justifyContent: "left",
     alignItems: "center",
     flexDirection: "column",
+  },
+  bold: {
+    fontSize: "normal",
+    fontWeight: 600,
+    color: "#EAE9FF",
+  },
+  paragraph: {
+    fontSize: "0.8rem",
+    color: "#EAE9FF",
+    lineHeight: "24px",
   },
 }));
 
@@ -44,9 +54,11 @@ export const Info = () => {
             </Box>
           </Grid>
           <Grid className={classes.item2} item xs={12} md={6}>
-            <Box>
-              <Typography variant="h5">How do I create my Vault?</Typography>
-              <Typography variant="caption">
+            <Box sx={{ color: "dcd9ff" }}>
+              <Typography className={classes.bold} variant="h6">
+                How do I create my Vault?
+              </Typography>
+              <Typography className={classes.paragraph} paragraph={true}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis delectus esse ullam vero consectetur vitae ea
                 molestias? Delectus, numquam asperiores.

@@ -5,12 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StyledEngineProvider } from "@material-ui/core/styles";
 import { Web3Provider } from "./web3";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/core/styles";
+import Theme from "./utils/theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <Web3Provider>
       <StyledEngineProvider injectFirst>
-        <App />
+        <ThemeProvider theme={Theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
       </StyledEngineProvider>
     </Web3Provider>
   </React.StrictMode>,

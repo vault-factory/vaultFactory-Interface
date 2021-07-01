@@ -30,6 +30,9 @@ const useStyles = makeStyles(() => ({
   space: {
     margin: "3rem 0 2rem 0",
   },
+  bold: {
+    fontWeight: "bold",
+  },
 }));
 
 export const Header = () => {
@@ -44,7 +47,9 @@ export const Header = () => {
         </Box>
 
         <Box className={classes.space}>
-          <Typography>Create your vault, earn money together</Typography>
+          <Typography className={classes.bold} variant="h5">
+            Create your vault, earn money together
+          </Typography>
         </Box>
         <Box>
           <Button />

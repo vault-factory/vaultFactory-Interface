@@ -20,9 +20,12 @@ const useStyles = makeStyles({
     display: "flex",
     padding: 0,
     marginTop: "1rem",
+    fontWeight: "bold",
   },
   link: {
     padding: "0 3em",
+    fontWeight: 500,
+    color: "#DCD9FF",
   },
   button: {
     borderRadius: "30px",
@@ -31,6 +34,7 @@ const useStyles = makeStyles({
     border: "1px solid #4774E9",
     padding: "0.3em 1.5em",
     boxShadow: "0px 0px 20px #0e1d44",
+    fontWeight: "500",
   },
 });
 

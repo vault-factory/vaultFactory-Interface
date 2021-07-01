@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: 6,
     backgroundClip: "padding-box",
     boxShadow: "0 20px 6px rgba(0 0 0 / 0.2)",
-
+    fontWeight: 700,
     "& span": {
       justifyContent: "center",
       display: "flex",
