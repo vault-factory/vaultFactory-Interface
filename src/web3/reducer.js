@@ -10,6 +10,12 @@ export const Web3Reducer = (state, action) => {
         ...state,
         provider: action.payload,
       };
+    case "SET_BALANCE":
+      return {
+        ...state,
+        balance: action.payload,
+      };
+
     default:
       return state;
   }

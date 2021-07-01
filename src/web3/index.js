@@ -8,6 +8,7 @@ const initialState = {
   loading: false,
   account: null,
   provider: null,
+  balance: null,
 };
 
 const providerOptions = {};
@@ -35,6 +36,13 @@ export const Web3Provider = ({ children }) => {
     });
   };
 
+  const setBalance = (balance) => {
+    dispatch({
+      type: "SET_BALANCE",
+      payload: balance,
+    });
+  };
+
   const logout = () => {
     setAccount(null);
     setProvider(null);
@@ -50,7 +58,10 @@ export const Web3Provider = ({ children }) => {
 
     const signer = await ethersProvider.getSigner();
     let account = await signer.getAddress();
+    let balance = await signer.getChainId();
+
     setAccount(account);
+    setBalance(balance);
 
     provider.on("chainChanged", () => {
       window.location.reload();

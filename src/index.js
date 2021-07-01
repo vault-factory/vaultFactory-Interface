@@ -3,13 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { StyledEngineProvider } from "@material-ui/core/styles";
 import { Web3Provider } from "./web3";
 
 ReactDOM.render(
   <React.StrictMode>
     <Web3Provider>
-      <App />
+      <StyledEngineProvider injectFirst>
+        <App />
+      </StyledEngineProvider>
     </Web3Provider>
   </React.StrictMode>,
   document.getElementById("root")
