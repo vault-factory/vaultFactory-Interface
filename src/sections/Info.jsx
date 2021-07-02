@@ -59,9 +59,11 @@ export const Info = () => {
                 How do I create my Vault?
               </Typography>
               <Typography className={classes.paragraph} paragraph={true}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis delectus esse ullam vero consectetur vitae ea
-                molestias? Delectus, numquam asperiores.
+                Creating your own vault is easier than opening a bank account.
+                Design anything from social saving strategies to bespoke trading
+                algorithms without writing any code. Vault Factory guides you
+                through the process in a few simple steps. Apply now for early
+                access.
               </Typography>
             </Box>
           </Grid>

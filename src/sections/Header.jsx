@@ -1,7 +1,9 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+
 import { makeStyles } from "@material-ui/styles";
+import Socials from "../components/Socials";
 import Button from "../components/ButtonStyled";
 import TopBar from "../components/navs/TopBar";
 import Logo from "../assets/imgs/logo.svg";
@@ -34,6 +36,11 @@ const useStyles = makeStyles(() => ({
     fontWeight: "400",
     color: "#DCD9FF",
   },
+  socials: {
+    display: "flex",
+    margin: "2rem 0 ",
+    "& button": { padding: "0 1rem" },
+  },
 }));
 
 export const Header = () => {
@@ -54,6 +61,9 @@ export const Header = () => {
         </Box>
         <Box>
           <Button />
+        </Box>
+        <Box className={classes.socials}>
+          <Socials />
         </Box>
       </div>
     </div>
